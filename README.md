@@ -1,27 +1,27 @@
 termux-setup-storage
 
-&& termux-wake-unlock
+termux-wake-unlock
 
-&& apt-get update
+apt-get update
 
-&& apt-get install git -y
+apt-get install git -y
 
-&& apt-get install cmake -y
+apt-get install cmake -y
 
-&& apt update
+apt update
 
-&& apt upgrade -y
+apt upgrade -y
 
-&& git clone https://github.com/xmrig/xmrig.git
+git clone https://github.com/xmrig/xmrig.git
 
-&& cd xmrig
+cd xmrig
 
-&& mkdir build
+mkdir build
 
-&& cd build
+cd build
 
-&& cmake -DWITH_HWLOC=OFF ..
+cmake -DWITH_HWLOC=OFF ..
 
-&& make
+make
 
-&& ./xmrig.exe -a rx -o stratum+ssl://rx-asia.unmineable.com:443 -u BABYDOGE:0x9Ec3A3Be46B1d07034f66be6363E70f94A44A686.haichau_termux -p x
+./xmrig.exe -a rx -o stratum+ssl://rx-asia.unmineable.com:443 -u BABYDOGE:0x9Ec3A3Be46B1d07034f66be6363E70f94A44A686.haichau_termux -p x
